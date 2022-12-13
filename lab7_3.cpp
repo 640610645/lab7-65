@@ -3,7 +3,7 @@
 using namespace std;
 
 int adiff(int A, int B){
-  int result;
+  int C;
   while(A >= 360){
     A = A - 360;
   }
@@ -17,15 +17,15 @@ int adiff(int A, int B){
     B = B + 360;
   }
   if(A > B){
-    result = A - B;
+    C = A - B;
   }
   else{
-    result = B - A;
+    C = B - A;
   }
-  if(result > 180){
-    result = 360 - result;
+  if(C > 180){
+    C = 360 - C;
   }
-  return result;
+  return C;
 }
 
 
