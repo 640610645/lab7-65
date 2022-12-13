@@ -2,6 +2,32 @@
 
 using namespace std;
 
+int adiff(int A, int B){
+  int result;
+  while(A >= 360){
+    A = A - 360;
+  }
+  while(A <= -360){
+    A = A + 360;
+  }
+  while(B >= 360){
+    B = B - 360;
+  }
+  while(B <= -360){
+    B = B + 360;
+  }
+  if(A > B){
+    result = A - B;
+  }
+  else{
+    result = B - A;
+  }
+  if(result > 180){
+    result = 360 - result;
+  }
+  return result;
+}
+
 
 int main(){
   cout << adiff(180,270);
